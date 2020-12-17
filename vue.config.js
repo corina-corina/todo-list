@@ -1,5 +1,7 @@
 /* vue.config.js file to be place in the root of your repository */
 
 module.exports = {
-    publicPath: '/todo-list/'
-  }
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/todo-list/'
+  : '/'
+}
